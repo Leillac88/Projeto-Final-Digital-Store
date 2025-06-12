@@ -45,6 +45,7 @@
 .orderBy span {
   font-size: 16px;
   color: #474747;
+  font-weight: 600;
   white-space: nowrap;
 }
 
@@ -83,6 +84,7 @@
   color: #474747;
   margin-bottom: 1rem;
   letter-spacing: 0.75px;
+  font-weight: 700;
 }
 
 .filter hr {
@@ -117,6 +119,7 @@
   font-size: 14px;
   cursor: pointer;
   color: #474747;
+  font-weight: 600;
 }
 
 .filter-toggle {
@@ -124,7 +127,7 @@
   background-color: #c92071;
   color: white;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
   border: none;
   border-radius: 8px;
   padding: 12px 20px;
@@ -197,7 +200,7 @@
 
 .productCardDescription {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   color: #474747;
   line-height: 32px;
   letter-spacing: 0.75px;
