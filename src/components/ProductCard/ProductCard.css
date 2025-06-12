@@ -1,23 +1,23 @@
-.prod-card-bg {
+.productCard-bg {
   background-color: #f9f9f9;
   padding: 1rem 0;
 }
 
-.prod-card {
+.productCard {
   max-width: 1250px;
   width: 100%;
   margin: auto;
   margin-bottom: 50px;
 }
 
-.prod-card-header {
+.cardHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5rem;
 }
 
-.prod-card-header h2 {
+.cardHeader h2 {
   font-weight: 700;
   font-size: 24px;
   line-height: 38px;
@@ -25,7 +25,7 @@
   color: #474747;
 }
 
-.prod-card-header a {
+.cardHeader a {
   text-decoration: none;
   color: #c92071;
   font-size: 1.125rem;
@@ -33,28 +33,28 @@
   align-items: center;
 }
 
-.prod-card-header a:hover {
+.cardHeader a:hover {
   text-decoration: underline;
 }
 
-.prod-card-header a img {
+.cardHeader a img {
   height: 18px;
   margin-left: 8px;
 }
 
-.prod-card-grid {
+.productCardGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.2rem;
 }
 
-.prod-card-item {
+.productCardItem {
   width: 100%;
   height: 450px;
   border-radius: 8px;
 }
 
-.prod-card-image {
+.productCardImage {
   width: 292px;
   height: 321px;
   cursor: pointer;
@@ -62,11 +62,11 @@
   transition: transform 0.4s;
 }
 
-.prod-card-image:hover {
+.productCardImage:hover {
   transform: scale(1.02);
 }
 
-.prod-card-image img {
+.productCardImage img {
   width: 100%;
   height: 100%;
   background-color: #fff;
@@ -74,7 +74,7 @@
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
 }
 
-.prod-card-descPorc {
+.productCardPercentage {
   position: absolute;
   background-color: #e7ff86;
   border-radius: 20px;
@@ -86,7 +86,7 @@
   padding: 5px 10px;
 }
 
-.prod-card-name {
+.productCardName {
   font-size: 14px;
   font-weight: bold;
   color: #8F8F8F;
@@ -94,7 +94,7 @@
   margin-bottom: -10px;
 }
 
-.prod-card-desc {
+.productCardDesc {
   font-size: 18px;
   font-weight: 500;
   color: #474747;
@@ -103,14 +103,14 @@
   margin-bottom: -16px;
 }
 
-.prod-card-prices {
+.productPrices {
   display: flex;
   gap: 0.5rem;
   height: 1.3rem;
   margin-bottom: 10px;
 }
 
-.prod-card-price {
+.productCardPrice {
   color: #8F8F8F;
   text-decoration: line-through;
   font-size: 1rem;
@@ -119,7 +119,7 @@
   vertical-align: sub;
 }
 
-.prod-card-priceDisc {
+.productCardDiscount {
   color: #1F1F1F;
   font-weight: bold;
   margin-bottom: 10px;
@@ -130,50 +130,50 @@
 
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .prod-card-grid {
+  .productCardGrid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
 
-  .prod-card {
+  .productCard {
     padding: 0 2rem;
   }
 
-  .prod-card-item {
+  .productCardItem {
     min-height: 380px;
   }
 }
 
 @media (min-width: 600px) and (max-width: 767px) {
-  .prod-card-grid {
+  .productCardGrid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
 
-  .prod-card {
+  .productCard {
     padding: 0 1.5rem;
   }
 
-  .prod-card-item {
+  .productCardItem {
     min-height: 350px;
   }
 
-  .prod-card-header {
+  .cardHeader {
     margin-bottom: 1rem;
   }
 }
 
 @media (min-width: 480px) and (max-width: 599px) {
-  .prod-card-grid {
+  .productCardGrid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
 
-  .prod-card {
+  .productCard {
     padding: 0 1rem;
   }
 
-  .prod-card-item {
+  .productCardItem {
     min-height: 320px;
   }
 }
@@ -183,82 +183,82 @@
     padding: 0.5rem;
   }
 
-  .prod-card {
+  .productCard {
     padding: 0 0.5rem;
     margin-bottom: 30px;
   }
 
-  .prod-card-grid {
+  .productCardGrid {
     grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
     max-width: 300px;
     margin: 0 auto;
   }
 
-  .prod-card-item {
+  .productCardItem {
     min-height: 320px;
     max-width: 100%;
   }
 
-  .prod-card-header {
+  .cardHeader {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
     margin-bottom: 1rem;
   }
 
-  .prod-card-header a {
+  .cardHeader a {
     align-self: flex-end;
   }
 
-  .prod-card-header a img {
+  .cardHeader a img {
     height: 14px;
   }
 
-  .prod-card-descPorc {
+  .productCardPercentage {
     padding: 3px 8px;
     top: 8px;
     left: 8px;
   }
 
-  .prod-card-name {
+  .productCardName {
     margin: 8px 0 3px 0;
   }
 
-  .prod-card-desc {
+  .productCardDesc {
     margin-bottom: 8px;
   }
 
-  .prod-card-prices {
+  .productPrices {
     gap: 0.3rem;
   }
 }
 
 @media (max-width: 320px) {
-  .prod-card-grid {
+  .productCardGrid {
     grid-template-columns: 1fr;
     gap: 1rem;
     max-width: 280px;
   }
 
-  .prod-card-item {
+  .productCardItem {
     min-height: 300px;
     max-width: 100%;
   }
 }
 
 @media (hover: hover) {
-  .prod-card-image:hover {
+  .productCardImage:hover {
     transform: scale(1.02);
   }
 }
 
 @media (hover: none) {
-  .prod-card-image:hover {
+  .productCardImage:hover {
     transform: none;
   }
 
-  .prod-card-image:active {
+  .productCardImage:active {
     transform: scale(0.98);
   }
 }

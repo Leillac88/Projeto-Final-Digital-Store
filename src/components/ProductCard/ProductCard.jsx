@@ -2,13 +2,13 @@ import "./ProductCard.css";
 import { Link } from "react-router-dom";
 import ArrowRight from "../../assets/right-arrow.svg";
 import Adidas from "../../../public/tenis8.png";
-import WhiteSneaker from '../../../public/tenis1.png'
-import BlueSneaker from '../../../public/tenis2.png'
-import LemonSneaker from '../../../public/tenis3.png'
-import BlackPuma from '../../../public/tenis4.png'
-import RedNike from '../../../public/tenis5.png'
-import NikePurple from '../../../public/tenis16.png'
-import Balenci1 from '../../../public/tenis7.png'
+import WhiteSneaker from '../../../public/tenis1.png';
+import BlueSneaker from '../../../public/tenis2.png';
+import LemonSneaker from '../../../public/tenis3.png';
+import BlackPuma from '../../../public/tenis4.png';
+import RedNike from '../../../public/tenis5.png';
+import NikePurple from '../../../public/tenis16.png';
+import Balenci1 from '../../../public/tenis7.png';
 
 const products = [
   {
@@ -71,30 +71,34 @@ const products = [
   },
 ];
 
-export function ProductCard({ quantidadeProdutos }) {
-  const produtosParaMostrar = products.slice(0, quantidadeProdutos);
+export function ProductCard({ quantidadeProdutos = products.length }) {
+  const produtosEmAlta = products.slice(0, quantidadeProdutos);
 
   return (
-    <div className="prod-card-bg">
-      <section className="prod-card">
-        <div className="prod-card-header">
+    <div className="productCard-bg">
+      <section className="productCard">
+        <div className="cardHeader">
           <h2>Produtos em alta</h2>
-          <Link to="/products">
-            Ver todos <img src={ArrowRight} alt="" />
+          <Link to="/products" className="seeAllLink">
+            Ver todos <img src={ArrowRight} alt="Seta para a direita" />
           </Link>
         </div>
-        <div className="prod-card-grid">
-          {produtosParaMostrar.map((produto, index) => (
-            <div key={index} className="prod-card-item">
-              <div className="prod-card-image">
+        <div className="productCardGrid">
+          {produtosEmAlta.map((produto, index) => (
+            <div key={index} className="productCardItem">
+              <div className="productCardImage">
                 <img src={produto.image} alt={produto.nome} />
-                {produto.descPorc && <p className="prod-card-descPorc">{produto.descPorc}</p>}
+                {produto.descPorc && (
+                  <p className="productCardPercentage">{produto.descPorc}</p>
+                )}
               </div>
-              <p className="prod-card-name">{produto.nome}</p>
-              <p className="prod-card-desc">{produto.descricao}</p>
-              <div className="prod-card-prices">
-                <p className="prod-card-price">{produto.preco}</p>
-                <p className="prod-card-priceDisc">{produto.desconto}</p>
+              <p className="productCardName">{produto.nome}</p>
+              <p className="productCardDesc">{produto.descricao}</p>
+              <div className="productPrices">
+                {produto.preco && (
+                  <p className="productCardPrice">{produto.preco}</p>
+                )}
+                <p className="productCardDiscount">{produto.desconto}</p>
               </div>
             </div>
           ))}

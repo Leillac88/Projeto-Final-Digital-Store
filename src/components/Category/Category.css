@@ -24,7 +24,7 @@ section .main {
   cursor: pointer;
 }
 
-section .main .f {
+section .main .icons {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,7 +33,7 @@ section .main .f {
   color: #474747;
 }
 
-section .main .f picture {
+section .main .icons picture {
   background-color: #ffffff;
   width: 104px;
   height: 104px;
@@ -42,13 +42,13 @@ section .main .f picture {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.05);
 }
 
-section .main .f picture img {
+section .main .icons picture img {
   width: 64px;
   height: 64px;
   transition: transform 0.5s;
 }
 
-.f picture img:hover {
+.icons picture img:hover {
   filter: invert(50%) sepia(90%) saturate(7000%) hue-rotate(319deg) brightness(78%) contrast(97%);
   transform: scale(1.05);
 }
@@ -68,13 +68,13 @@ section .main .f picture img {
     max-width: 600px;
   }
 
-  section .main .f picture {
+  section .main .icons picture {
     width: 96px;
     height: 96px;
     padding: 18px;
   }
 
-  section .main .f picture img {
+  section .main .icons picture img {
     width: 60px;
     height: 60px;
   }
@@ -97,23 +97,23 @@ section .main .f picture img {
     justify-content: space-around;
   }
 
-  section .main .f {
+  section .main .icons {
     min-width: 100px;
     gap: 0.5rem;
   }
 
-  section .main .f picture {
+  section .main .icons picture {
     width: 88px;
     height: 88px;
     padding: 16px;
   }
 
-  section .main .f picture img {
+  section .main .icons picture img {
     width: 56px;
     height: 56px;
   }
 
-  section .main .f p {
+  section .main .icons p {
     font-size: 13px;
   }
 }
@@ -139,41 +139,41 @@ section .main .f picture img {
     min-height: 200px;
   }
 
-  section .main .f {
+  section .main .icons {
     min-width: 85px;
     gap: 0.4rem;
     flex: 0 0 calc(33.333% - 0.67rem);
     max-width: 100px;
   }
 
-  section .main .f:nth-child(4) {
+  section .main .icons:nth-child(4) {
     flex: 0 0 calc(45% - 0.5rem);
     max-width: 120px;
     margin-left: 5%;
   }
 
-  section .main .f:nth-child(5) {
+  section .main .icons:nth-child(5) {
     flex: 0 0 calc(45% - 0.5rem);
     max-width: 120px;
     margin-right: 5%;
   }
 
-  section .main .f picture {
+  section .main .icons picture {
     width: 72px;
     height: 72px;
     padding: 12px;
   }
 
-  section .main .f picture img {
+  section .main .icons picture img {
     width: 48px;
     height: 48px;
   }
 
-  section .main .f p {
+  section .main .icons p {
     font-size: 12px;
   }
 
-  .f picture:hover {
+  .icons picture:hover {
     transform: translateY(-2px);
   }
 }
@@ -197,36 +197,36 @@ section .main .f picture img {
     min-height: 180px;
   }
 
-  section .main .f {
+  section .main .icons {
     min-width: 70px;
     flex: 0 0 calc(33.333% - 0.53rem);
     max-width: 80px;
   }
 
-  section .main .f:nth-child(4) {
+  section .main .icons:nth-child(4) {
     flex: 0 0 calc(42% - 0.4rem);
     max-width: 90px;
     margin-left: 8%;
   }
 
-  section .main .f:nth-child(5) {
+  section .main .icons:nth-child(5) {
     flex: 0 0 calc(42% - 0.4rem);
     max-width: 90px;
     margin-right: 8%;
   }
 
-  section .main .f picture {
+  section .main .icons picture {
     width: 60px;
     height: 60px;
     padding: 10px;
   }
 
-  section .main .f picture img {
+  section .main .icons picture img {
     width: 40px;
     height: 40px;
   }
 
-  section .main .f p {
+  section .main .icons p {
     font-size: 11px;
   }
 }
@@ -238,18 +238,18 @@ section .main .f picture img {
     height: auto;
   }
 
-  section .main .f {
+  section .main .icons {
     flex: none;
     max-width: none;
     width: 100%;
   }
 
-  section .main .f picture {
+  section .main .icons picture {
     width: 80px;
     height: 80px;
   }
 
-  section .main .f p {
+  section .main .icons p {
     font-size: 12px;
   }
 }

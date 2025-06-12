@@ -69,12 +69,12 @@ export function Header() {
         <div>
           {!user ? (
             <>
-              <Link to="/register" className="cadastre">Cadastre-se</Link>
-              <Link to="/login" className="entrar">Entrar</Link>
+              <Link to="/register" className="register">Cadastre-se</Link>
+              <Link to="/login" className="enter">Entrar</Link>
             </>
           ) : (
             <>
-              <div className="usuario-box">
+              <div className="user-box">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="24"
@@ -85,10 +85,10 @@ export function Header() {
                 >
                   <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4H21.6v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
                 </svg>
-                <span className="usuario-logado">Olá, <strong>{user}</strong></span>
+                <span className="loggedInUser">Olá, <strong>{user}</strong></span>
               </div>
 
-              <button onClick={handleLogout} className="sair">Sair</button>
+              <button onClick={handleLogout} className="logOut">Sair</button>
             </>
           )}
           <img

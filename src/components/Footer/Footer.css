@@ -5,13 +5,13 @@ footer {
   width: 100%;
 }
 
-.container-1 {
+.infoContainer {
   display: flex;
   flex: 1;
   flex-direction: column;
 }
 
-.container-logo {
+.logoContainer {
   position: relative;
   display: flex;
   align-items: center;
@@ -21,7 +21,7 @@ footer {
   left: 80px;
 }
 
-.text-container {
+.textContainer {
   position: relative;
   display: flex;
   color: #fffefe;
@@ -35,7 +35,7 @@ footer {
   left: 80px;
 }
 
-.icons-sociais {
+.socialIcons {
   display: flex;
   position: relative;
   gap: 35px;
@@ -43,15 +43,15 @@ footer {
   left: 80px;
 }
 
-.icons-sociais a {
+.socialIcons a {
   transition: transform 0.5s;
 }
 
-.icons-sociais a:hover {
+.socialIcons a:hover {
   transform: scale(1.10);
 }
 
-.container-2 {
+.columnsContainer {
   flex: 1;
   display: flex;
   align-items: flex-start;
@@ -59,20 +59,20 @@ footer {
   gap: 6.5rem;
 }
 
-.container-2 div {
+.columnsContainer div {
   display: flex;
   color: #ffffff;
   gap: 70px;
 }
 
-.title {
+.contentTitle {
   display: flex;
   margin-bottom: 18px;
   font-weight: bold;
   font-size: 1rem;
 }
 
-.container-info :first-child {
+.columnContent :first-child {
   gap: 10px;
   display: flex;
   flex-direction: column;
@@ -87,7 +87,7 @@ hr {
   opacity: 0.3;
 }
 
-.data-footer {
+.FooterCopy {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -99,28 +99,28 @@ hr {
 }
 
 @media (max-width: 1024px) {
-  .container-logo {
+  .logoContainer {
     left: 40px;
     top: 40px;
   }
 
-  .text-container {
+  .textContainer {
     left: 40px;
     top: 60px;
     width: 280px;
   }
 
-  .icons-sociais {
+  .socialIcons {
     left: 40px;
     top: 95px;
   }
 
-  .container-2 {
+  .columnsContainer {
     gap: 4rem;
     margin-top: 3rem;
   }
 
-  .container-2 div {
+  .columnsContainer div {
     gap: 40px;
   }
 }
@@ -132,20 +132,20 @@ hr {
     padding: 2rem 1rem;
   }
 
-  .container-1 {
+  .infoContainer {
     align-items: center;
     text-align: center;
     width: 100%;
     max-width: 100%;
   }
 
-  .container-logo {
+  .logoContainer {
     justify-content: center;
     position: static;
     margin-bottom: 1rem;
   }
 
-  .text-container {
+  .textContainer {
     text-align: center;
     max-width: 100%;
     width: 100%;
@@ -153,25 +153,25 @@ hr {
     margin: 1rem 0;
   }
 
-  .icons-sociais {
+  .socialIcons {
     justify-content: center;
     position: static;
     margin-top: 1.5rem;
     gap: 25px;
   }
 
-  .container-2 {
+  .columnsContainer {
     justify-content: center;
     margin-top: 2rem;
     gap: 3rem;
     width: 100%;
   }
 
-  .container-info {
+  .columnContent {
     min-width: 150px;
   }
 
-  .container-2 div {
+  .columnsContainer div {
     gap: 30px;
   }
 }
@@ -181,27 +181,27 @@ hr {
     padding: 1.5rem 1rem;
   }
 
-  .container-1 {
+  .infoContainer {
     margin-bottom: 1rem;
   }
 
-  .text-container {
+  .textContainer {
     font-size: 14px;
     line-height: 22px;
     padding: 0 1rem;
   }
 
-  .icons-sociais {
+  .socialIcons {
     gap: 20px;
     margin-top: 1rem;
   }
 
-  .icons-sociais img {
+  .socialIcons img {
     width: 20px;
     height: 20px;
   }
 
-  .container-2 {
+  .columnsContainer {
     flex-direction: column;
     gap: 2rem;
     align-items: center;
@@ -209,35 +209,35 @@ hr {
     margin-top: 1.5rem;
   }
 
-  .container-info {
+  .columnContent {
     align-items: center;
     width: 100%;
     max-width: 250px;
   }
 
-  .conteudo {
+  .contentList {
     align-items: center;
     text-align: center;
   }
 
-  .container-2 div {
+  .columnsContainer div {
     gap: 15px;
     flex-direction: column;
     align-items: center;
   }
 
-  .title {
+  .contentTitle {
     font-size: 1.1rem;
     margin-bottom: 1rem;
     justify-content: center;
   }
 
-  .conteudo a {
+  .contentList a {
     font-size: 0.85rem;
     padding: 0.2rem 0;
   }
 
-  .data-footer {
+  .FooterCopy {
     font-size: 12px;
     margin-top: 1.5rem;
   }
@@ -253,33 +253,33 @@ hr {
     padding: 1rem 0.5rem;
   }
 
-  .text-container {
+  .textContainer {
     font-size: 13px;
     line-height: 20px;
     padding: 0 0.5rem;
   }
 
-  .container-2 {
+  .columnsContainer {
     gap: 1.5rem;
   }
 
-  .container-info {
+  .columnContent {
     max-width: 200px;
   }
 
-  .title {
+  .contentTitle {
     font-size: 1rem;
   }
 
-  .conteudo a {
+  .contentList a {
     font-size: 0.8rem;
   }
 
-  .icons-sociais {
+  .socialIcons {
     gap: 15px;
   }
 
-  .icons-sociais img {
+  .socialIcons img {
     width: 18px;
     height: 18px;
   }

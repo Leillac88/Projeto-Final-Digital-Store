@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
-const links = [
+const navLinks = [
   { path: "/", label: "Home" },
   { path: "/products", label: "Produtos" },
   { path: "/categorias", label: "Categorias" },
@@ -9,23 +9,20 @@ const links = [
 ];
 
 export function NavBar({ menuAberto }) {
-  const location = useLocation();
+  const { pathname } = useLocation();
+
+  const isActive = (path) =>
+    path === "/"
+      ? pathname === "/"
+      : pathname.startsWith(path);
 
   return (
     <nav className={`navbar ${menuAberto ? "aberto" : ""}`}>
-
       <ul>
-        {links.map((link, index) => (
-          <li key={index}>
-            <Link
-              to={link.path}
-              className={
-                link.path === "/"
-                  ? location.pathname === "/" ? "active" : ""
-                  : location.pathname.startsWith(link.path) ? "active" : ""
-              }
-            >
-              {link.label}
+        {navLinks.map(({ path, label }) => (
+          <li key={path}>
+            <Link to={path} className={isActive(path) ? "active" : ""}>
+              {label}
             </Link>
           </li>
         ))}

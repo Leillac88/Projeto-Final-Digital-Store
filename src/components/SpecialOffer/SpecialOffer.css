@@ -1,4 +1,4 @@
-.container-ofert {
+.offerContainer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,7 +8,7 @@
   flex-wrap: wrap;
 }
 
-.image-ofert {
+.offerImage {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +17,7 @@
   height: 466px;
 }
 
-.sapato {
+.specialTenis {
   display: flex;
   position: absolute;
   justify-content: center;
@@ -30,7 +30,7 @@
   height: auto;
 }
 
-.fundo-sapato {
+.ornamentBg {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,7 +42,7 @@
   height: auto;
 }
 
-.conteudo-ofert {
+.offerContent {
   display: flex;
   justify-content: center;
   width: 500px;
@@ -60,7 +60,7 @@ h2 {
   color: #474747;
 }
 
-.title-ofert {
+.offerTitle {
   color: #c92071;
   font-weight: 700;
   font-size: 14px;
@@ -68,7 +68,7 @@ h2 {
   letter-spacing: 0.75px;
 }
 
-.special-text {
+.offerText {
   color: #474747;
   font-weight: 400;
   font-size: 16px;
@@ -77,23 +77,23 @@ h2 {
 }
 
 @media (max-width: 1200px) {
-  .container-ofert {
+  .offerContainer {
     gap: 5rem;
   }
 }
 
 @media (max-width: 992px) {
-  .container-ofert {
+  .offerContainer {
     gap: 3rem;
     margin-top: 80px;
   }
 
-  .image-ofert {
+  .offerImage {
     width: 400px;
     height: 400px;
   }
 
-  .conteudo-ofert {
+  .offerContent {
     width: 400px;
   }
 
@@ -104,19 +104,19 @@ h2 {
 }
 
 @media (max-width: 768px) {
-  .container-ofert {
+  .offerContainer {
     flex-direction: column;
     gap: 2rem;
     margin-top: 60px;
   }
 
-  .image-ofert {
+  .offerImage {
     width: 350px;
     height: 350px;
     order: 1;
   }
 
-  .conteudo-ofert {
+  .offerContent {
     width: 100%;
     max-width: 500px;
     order: 2;
@@ -131,13 +131,13 @@ h2 {
     text-align: center;
   }
 
-  .special-text {
+  .offerText {
     text-align: center;
   }
 }
 
 @media (max-width: 480px) {
-  .image-ofert {
+  .offerImage {
     width: 280px;
     height: 280px;
   }
@@ -147,7 +147,7 @@ h2 {
     line-height: 34px;
   }
 
-  .special-text {
+  .offerText {
     font-size: 14px;
     line-height: 24px;
   }

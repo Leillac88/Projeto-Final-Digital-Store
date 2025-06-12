@@ -1,71 +1,64 @@
-.bg-color {
-  background-color: #F9F8FE;
+.color-bg {
+  background-color: #f9f8fe;
   padding-top: 1rem;
 }
 
-.prodCard {
+.productCard {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
 }
 
-.first {
+.productOrder {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
   flex-wrap: wrap;
   gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-.first h2 {
-  color: #474747;
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 24px;
-  letter-spacing: 0.75px;
+.productOrder h2 {
   flex: 1;
   min-width: 200px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #474747;
+  letter-spacing: 0.75px;
   text-align: left;
 }
 
-.first h2 span {
+.productOrder h2 span {
   font-weight: 400;
   font-size: 16px;
   line-height: 28px;
   letter-spacing: 0.75px;
 }
 
-.ordenar-por {
+.orderBy {
   display: flex;
   align-items: center;
   gap: 12px;
   flex-shrink: 0;
 }
 
-.ordenar-por span {
-  font-weight: 700;
+.orderBy span {
   font-size: 16px;
-  line-height: 28px;
-  letter-spacing: 0.75px;
-  white-space: nowrap;
   color: #474747;
+  white-space: nowrap;
 }
 
-.ordenar-por select {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
-  letter-spacing: 0.75px;
-  border-radius: 8px;
-  border: 1px solid #474747;
-  background-color: #f5f5f5;
+.orderBy select {
   padding: 8px;
-  cursor: pointer;
   min-width: 150px;
+  background-color: #f5f5f5;
+  border: 1px solid #474747;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.content {
+.filterContent {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
@@ -77,31 +70,33 @@
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
-  flex-shrink: 0;
   margin-top: 14px;
+  flex-shrink: 0;
+}
+
+.filter.show {
+  display: block;
+}
+
+.filter p {
+  font-size: 16px;
+  color: #474747;
+  margin-bottom: 1rem;
+  letter-spacing: 0.75px;
 }
 
 .filter hr {
   margin: 1.5rem 0;
-  border: none;
   height: 2px;
-  background: #CCCCCC;
-}
-
-.filter p {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.75px;
-  color: #474747;
-  margin-bottom: 1rem;
+  border: none;
+  background: #ccc;
 }
 
 .filter form {
   display: flex;
   flex-direction: column;
-  color: #474747;
   margin-bottom: 0.5rem;
+  color: #474747;
 }
 
 .filter form div {
@@ -110,140 +105,131 @@
   margin-bottom: 0.1rem;
 }
 
-.filter input[type="checkbox"],
-.filter input[type="radio"] {
-  accent-color: #c92071;
+.filter input[type="checkbox"] {
   width: 20px;
   height: 20px;
   margin-right: 10px;
+  accent-color: #c92071;
   cursor: pointer;
-  flex-shrink: 0;
 }
 
 .filter form label {
   font-size: 14px;
-  line-height: 20px;
-  color: #474747;
   cursor: pointer;
-}
-
-.second {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  flex: 1;
-}
-
-.prod-page-item {
-  border-radius: 8px;
-  padding: 15px;
-  text-align: center;
-  text-decoration: none;
-}
-
-.prod-page-image {
-  width: 100%;
-  height: 260px;
-  cursor: pointer;
-  position: relative;
-  transition: transform 0.4s;
-}
-
-.prod-page-image:hover {
-  transform: scale(1.05);
-}
-
-.prod-page-image img {
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
-  object-fit: contain;
-}
-
-.prod-page-descPorc {
-  position: absolute;
-  top: -5px;
-  left: 10px;
-  background-color: #e7ff86;
-  border-radius: 20px;
-  padding: 5px 10px;
-  font-size: 0.8rem;
-  font-weight: bold;
   color: #474747;
-}
-
-.prod-page-nome {
-  display: flex;
-  font-weight: bold;
-  color: #8F8F8F;
-  margin-top: 8px;
-  margin-bottom: -16px;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 20px;
-  letter-spacing: 0.75px;
-}
-
-.prod-page-descricao {
-  display: flex;
-  font-size: 16px;
-  color: #474747;
-  font-weight: 500;
-  line-height: 32px;
-  letter-spacing: 0.75px;
-  margin-bottom: -16px;
-  text-align: left;
-}
-
-.prod-page-prices {
-  display: flex;
-  gap: 0.5rem;
-  height: 1.3rem;
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-.prod-page-price {
-  color: #8F8F8F;
-  text-decoration: line-through;
-  font-size: 1rem;
-  line-height: 38px;
-  letter-spacing: 0.75px;
-  vertical-align: top;
-}
-
-.prod-page-priceDisc {
-  color: #1F1F1F;
-  margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 38px;
-  letter-spacing: 0.75px;
 }
 
 .filter-toggle {
   display: none;
   background-color: #c92071;
   color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
   font-size: 16px;
   font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  width: 100%;
   cursor: pointer;
   margin-bottom: 1rem;
-  width: 100%;
 }
 
 .filter-toggle:hover {
   background-color: #a91a5e;
 }
 
+.pageContent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  flex: 1;
+}
+
+.pageItem {
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.pageImage {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+
+.pageImage:hover {
+  transform: scale(1.05);
+}
+
+.pageImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.productDescPercentage {
+  position: absolute;
+  top: -5px;
+  left: 10px;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  background-color: #e7ff86;
+  color: #474747;
+  border-radius: 20px;
+}
+
+.productName {
+  font-size: 12px;
+  font-weight: 700;
+  color: #8f8f8f;
+  margin-top: 8px;
+  margin-bottom: -16px;
+  letter-spacing: 0.75px;
+  text-align: left;
+}
+
+.productCardDescription {
+  font-size: 16px;
+  color: #474747;
+  line-height: 32px;
+  letter-spacing: 0.75px;
+  text-align: left;
+  margin-bottom: -16px;
+}
+
+.productPrices {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 20px;
+  height: 1.3rem;
+  text-align: left;
+}
+
+.productRealPrice {
+  font-size: 1rem;
+  color: #8f8f8f;
+  text-decoration: line-through;
+  letter-spacing: 0.75px;
+  vertical-align: top;
+}
+
+.productPriceDiscount {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f1f1f;
+  letter-spacing: 0.75px;
+}
+
 
 @media (max-width: 1024px) {
-  .prodCard {
+  .productCard {
     padding: 0.75rem;
   }
 
@@ -256,7 +242,7 @@
     gap: 15px;
   }
 
-  .prod-page-image {
+  .pageImage {
     height: 220px;
   }
 }
@@ -273,14 +259,14 @@
     font-size: 0.9rem;
   }
 
-  .ordenar-por {
+  .orderBy {
     justify-content: center;
     width: 100%;
   }
 
-  .ordenar-por select {
-    flex: 1;
+  .orderBy select {
     max-width: 200px;
+    flex: 1;
   }
 
   .content {
@@ -292,13 +278,9 @@
   }
 
   .filter {
+    display: none;
     width: 100%;
     margin-top: 0;
-    display: none;
-  }
-
-  .filter.show {
-    display: block;
   }
 
   .second {
@@ -306,46 +288,43 @@
     gap: 12px;
   }
 
-  .prod-page-item {
+  .pageItem {
     padding: 10px;
   }
 
-  .prod-page-image {
+  .pageImage {
     height: 180px;
   }
 
-  .prod-page-descricao {
+  .productCardDescription {
     font-size: 14px;
     line-height: 28px;
   }
 
-  .prod-page-priceDisc {
+  .productPriceDiscount {
     font-size: 18px;
   }
 }
 
 @media (max-width: 480px) {
-  .prodCard {
+  .productCard {
     padding: 0.5rem;
   }
 
   .first h2 {
     font-size: 0.8rem;
     line-height: 20px;
-    text-align: center;
   }
 
-  .first h2 span {
-    font-size: 14px;
-    line-height: 24px;
-  }
-
-  .ordenar-por span {
+  .first h2 span,
+  .orderBy span,
+  .orderBy select,
+  .filter p,
+  .filter form label {
     font-size: 14px;
   }
 
-  .ordenar-por select {
-    font-size: 14px;
+  .orderBy select {
     padding: 6px;
   }
 
@@ -353,75 +332,62 @@
     padding: 15px;
   }
 
-  .filter p {
-    font-size: 14px;
-  }
-
-  .filter form label {
-    font-size: 14px;
-  }
-
   .second {
     grid-template-columns: 1fr;
     gap: 10px;
   }
 
-  .prod-page-item {
-    padding: 8px;
-  }
-
-  .prod-page-image {
+  .pageImage {
     height: 200px;
   }
 
-  .prod-page-nome {
+  .productName {
     font-size: 11px;
   }
 
-  .prod-page-descricao {
+  .productCardDescription {
     font-size: 13px;
     line-height: 24px;
   }
 
-  .prod-page-price {
+  .productRealPrice {
     font-size: 0.9rem;
   }
 
-  .prod-page-priceDisc {
+  .productPriceDiscount {
     font-size: 16px;
     line-height: 32px;
   }
 
-  .prod-page-descPorc {
+  .productDescPercentage {
     font-size: 0.7rem;
     padding: 3px 8px;
   }
 }
 
 @media (max-width: 320px) {
-  .prodCard {
+  .productCard {
     padding: 0.25rem;
   }
 
   .first h2 {
     font-size: 0.7rem;
-    text-align: center;
   }
 
   .first h2 span {
     font-size: 12px;
   }
 
-  .prod-page-image {
+  .pageImage {
     height: 160px;
   }
 
-  .prod-page-descricao {
+  .productCardDescription {
     font-size: 12px;
     line-height: 20px;
   }
 
-  .prod-page-priceDisc {
+  .productPriceDiscount {
     font-size: 14px;
     line-height: 28px;
   }

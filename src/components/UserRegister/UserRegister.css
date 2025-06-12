@@ -40,13 +40,14 @@
 
 .container .title-pessoal,
 .title-entrega {
-  padding: 1.5rem 0 1rem 2rem;
+  padding: 1rem 0 1rem 2rem;
   font-size: 14px;
   margin: 0;
   width: 100%;
   max-width: 750px;
   text-align: left;
   font-weight: 700;
+  margin-bottom: -1.5rem;
 }
 
 .container .linha {
@@ -98,7 +99,9 @@
 }
 
 input[type="text"],
-input[type="number"] {
+input[type="number"],
+input[type="email"],
+input[type="tel"] {
   width: calc(100% - 0.2rem);
   height: 50px;
   background-color: #F5F5F5;
@@ -127,7 +130,7 @@ input::placeholder {
   cursor: pointer;
   width: 100%;
   max-width: 750px;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   box-sizing: border-box;
 }
 

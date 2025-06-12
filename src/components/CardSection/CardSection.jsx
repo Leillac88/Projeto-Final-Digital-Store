@@ -13,18 +13,18 @@ const collections = [
 
 export function CardSection() {
   return (
-    <div className="color-bg">
-      <section className="containerSectionCard">
-        <div className="container-title">Coleções em destaque</div>
-        <div className="container-collection">
-          {collections.map((collection, index) => (
+    <div className="backgroundColor">
+      <section className="cardSectionContainer">
+        <div className="titleContainer">Coleções em destaque</div>
+        <div className="collectionContainer">
+          {collections.map(({ image, offer, title }, i) => (
             <div
-              key={index}
-              className="collection"
-              style={{ backgroundImage: `url(${collection.image})` }}
+              key={i}
+              className="collections"
+              style={{ backgroundImage: `url(${image})` }}
             >
-              <div className="oferta">{collection.offer}</div>
-              <h3>{collection.title}</h3>
+              <div className="offer">{offer}</div>
+              <h3>{title}</h3>
               <Link to="/products">
                 <ButtonOffer />
               </Link>

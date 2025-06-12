@@ -1,8 +1,8 @@
-.color-background {
+.backgroundColor {
   background-color: #F9F8FE;
 }
 
-.caminhoTenis h5 {
+.breadcrumbs h5 {
   padding: 1rem 0;
   color: #474747;
   font-weight: 500;
@@ -11,11 +11,11 @@
   letter-spacing: 0.25px;
 }
 
-.caminhoTenis {
+.breadcrumbs {
   margin: 0 8rem;
 }
 
-.descricaoProduto {
+.descProduto {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -23,7 +23,7 @@
   gap: 1rem;
 }
 
-.dadosProduto {
+.productData {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -33,61 +33,56 @@
   letter-spacing: 1px;
 }
 
-.imgDescProdColumn {
-  display: flex;
-  flex-direction: column;
-}
-
-.imgDescProdRow {
+.avaliationRow {
   display: flex;
   flex-direction: row;
   gap: 10px;
   align-items: center;
 }
 
-.imagemGrande img {
+.principalImg img {
   min-width: 620px;
   height: 571px;
   top: 274px;
   left: 100px;
 }
 
-.imagemGrande {
+.principalImg {
   position: relative;
 }
 
-.miniImagens {
+.thumbs {
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
   margin-bottom: 50px;
 }
 
-.miniImagens img {
+.thumbs img {
   width: 100px;
 }
 
-.miniImagens .item1 {
+.thumbs .item1 {
   background-color: #e2e3ff;
 }
 
-.miniImagens .item2 {
+.thumbs .item2 {
   background-color: #ffe8bc;
 }
 
-.miniImagens .item3 {
+.thumbs .item3 {
   background-color: #ffc0bc;
 }
 
-.miniImagens .item4 {
+.thumbs .item4 {
   background-color: #dec699;
 }
 
-.miniImagens .item5 {
+.thumbs .item5 {
   background-color: #e8dfcf;
 }
 
-.referenciasProduto {
+.productReference {
   color: #666666;
   font-weight: 500;
   font-size: 12px;
@@ -96,7 +91,7 @@
   vertical-align: middle;
 }
 
-.DescricaoProduto {
+.productDescription {
   font-weight: 700;
   font-size: 14px;
   line-height: 22px;
@@ -106,7 +101,7 @@
   margin-bottom: -0.5rem;
 }
 
-.paragProduto {
+.productText {
   font-weight: 500;
   font-size: 14px;
   line-height: 22px;
@@ -116,7 +111,7 @@
   word-wrap: break-word;
 }
 
-.tamProduto {
+.productSize {
   font-weight: 700;
   font-size: 14px;
   line-height: 22px;
@@ -125,7 +120,7 @@
   margin-bottom: 0.5rem;
 }
 
-.coresProduto {
+.productColors {
   font-weight: 700;
   font-size: 14px;
   line-height: 22px;
@@ -134,7 +129,7 @@
   margin-top: 1rem;
 }
 
-.referenciasAval {
+.avaliationNumber {
   color: #666666;
   font-weight: 500;
   font-size: 12px;
@@ -144,7 +139,7 @@
   margin-bottom: 1rem;
 }
 
-.avaliacao {
+.avaliation {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -159,7 +154,7 @@
   margin-bottom: 1rem;
 }
 
-.precoProd {
+.productPrice {
   font-weight: 700;
   font-size: 32px;
   line-height: 36px;
@@ -167,14 +162,14 @@
   color: #474747;
 }
 
-.precoProd span {
+.productPrice span {
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.75px;
 }
 
-.precoReal {
+.realPrice {
   color: #CCCCCC;
   font-weight: 400;
   font-size: 18px;
@@ -189,45 +184,26 @@
   gap: 10px;
 }
 
-.tamanhoSapato {
+.sizeNumbers {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
 
-.tamanhoItem {
-  color: #474747;
-  font-size: 1.2rem;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-  padding: 0.9rem;
-  transition: 0.2s;
-  cursor: pointer;
-}
-
-.tamanhoItem:hover {
-  color: white;
-  background-color: #c92071;
-}
-
-.semList {
-  list-style-type: none;
-}
-
-.btn-comprar {
+.buy-btn {
   border: none;
   border-radius: 5px;
   color: white;
   font-size: 1.2rem;
   padding: 10px 3rem;
-  width: 220;
-  background-color: #f6aa1c;
+  width: 220px;
+  background-color: #FFB31F;
   transition: background-color 0.3s ease;
   cursor: pointer;
   margin-top: 0.8rem;
 }
 
-.btn-slide {
+.slide-btn {
   position: absolute;
   top: 50%;
   display: flex;
@@ -237,37 +213,37 @@
   padding: 0 0.5rem;
 }
 
-.btn-slide .botaoNavegacao {
+.slide-btn .navigation-btn {
   cursor: pointer;
   color: #474747;
   transition: color 0.3s ease;
   height: 1.5rem;
 }
 
-.btn-slide .botaoNavegacao:hover {
+.slide-btn .navigation-btn:hover {
   color: #c92071;
 }
 
 @media (max-width: 768px) {
 
-  .caminhoTenis,
-  .descricaoProduto {
+  .breadcrumbs,
+  .descProduto {
     margin: 0 2rem;
     flex-direction: column;
   }
 
-  .imagemGrande img {
+  .principalImg img {
     min-width: 100%;
     height: auto;
   }
 
-  .miniImagens {
+  .thumbs {
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.5rem;
   }
 
-  .dadosProduto {
+  .productData {
     font-size: 24px;
     line-height: 30px;
   }
@@ -277,11 +253,11 @@
     align-items: flex-start;
   }
 
-  .tamanhoSapato {
+  .sizeNumbers {
     flex-wrap: wrap;
   }
 
-  .btn-comprar {
+  .buy-btn {
     width: 100%;
     padding: 10px;
     font-size: 1rem;
@@ -290,21 +266,21 @@
 
 @media (max-width: 480px) {
 
-  .caminhoTenis,
-  .descricaoProduto {
+  .breadcrumbs,
+  .descProduto {
     margin: 0 1rem;
   }
 
-  .imagemGrande img {
+  .principalImg img {
     width: 100%;
     height: auto;
   }
 
-  .miniImagens img {
+  .thumbs img {
     width: 60px;
   }
 
-  .dadosProduto {
+  .productData {
     font-size: 20px;
     line-height: 26px;
   }
@@ -314,18 +290,18 @@
     font-size: 1rem;
   }
 
-  .btn-comprar {
+  .buy-btn {
     font-size: 1rem;
     padding: 0.8rem;
   }
 
-  .avaliacao {
+  .avaliation {
     width: auto;
     font-size: 0.7rem;
     padding: 4px 8px;
   }
 
-  .btn-slide {
+  .slide-btn {
     padding: 0;
   }
 }

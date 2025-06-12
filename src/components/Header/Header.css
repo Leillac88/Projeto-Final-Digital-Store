@@ -51,22 +51,22 @@ header .heading div {
   gap: 2rem;
 }
 
-header .heading div .cadastre {
+header .heading div .register {
   color: #474747;
   text-decoration: underline;
   font-size: 16px;
   width: 6.3rem;
 }
 
-header .heading div .cadastre:hover {
+header .heading div .register:hover {
   color: #c92071;
 }
 
-header div .entrar {
+header div .enter {
   color: rgb(248, 248, 248);
 }
 
-.entrar {
+.enter {
   width: 7.125rem;
   height: 40px;
   background-color: #c92071;
@@ -84,7 +84,7 @@ header div .entrar {
   margin-right: 100px;
 }
 
-.entrar:hover {
+.enter:hover {
   background-color: #a1195b;
 }
 
@@ -93,13 +93,13 @@ header div .entrar {
   margin-left: -80px;
 }
 
-.usuario-logado {
+.loggedInUser {
   margin-right: 8rem;
   font-weight: bold;
   color: #474747;
 }
 
-.sair {
+.logOut {
   background: none;
   border: none;
   color: #474747;
@@ -109,12 +109,12 @@ header div .entrar {
   text-decoration: underline;
 }
 
-.sair:hover {
+.logOut:hover {
   background-color: transparent;
   color: #c92071
 }
 
-.usuario-box {
+.user-box {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -182,10 +182,10 @@ header div .entrar {
     display: none !important;
   }
 
-  .cadastre,
-  .entrar,
-  .usuario-box,
-  .sair {
+  .register,
+  .enter,
+  .user-box,
+  .logOut {
     display: none;
   }
 
@@ -214,7 +214,7 @@ header div .entrar {
     width: 400px;
   }
 
-  .entrar {
+  .enter {
     margin-right: 2rem;
   }
 
@@ -223,7 +223,7 @@ header div .entrar {
     margin-left: 0;
   }
 
-  .usuario-logado {
+  .loggedInUser {
     margin-right: 2rem;
   }
 }

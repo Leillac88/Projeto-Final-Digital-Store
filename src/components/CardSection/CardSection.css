@@ -1,4 +1,4 @@
-.containerSectionCard {
+.cardSectionContainer {
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-.container-title {
+.titleContainer {
   font-size: 24px;
   line-height: 38px;
   letter-spacing: 0.75px;
@@ -17,204 +17,153 @@
   text-align: left;
 }
 
-.container-collection {
+.collectionContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
   margin-top: 2rem;
+  padding: 0 2rem;
+  flex-wrap: wrap;
   cursor: pointer;
 }
 
-.collection {
-  width: 405px;
-  height: 251px;
-  border-radius: 0.5rem;
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: transform 0.5s;
-}
-
-.collection:hover {
-  transform: scale(1.05);
-}
-
-.oferta {
-  background-color: #e7ff86;
-  color: #474747;
-  width: 96px;
-  height: 32px;
-  font-size: 14px;
-  font-weight: bold !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 29px;
-  margin: 1rem auto 0 1.4rem;
-  padding: 5px 15px 5px 15px;
-}
-
-h3 {
-  margin: 1rem 8rem 0 1.5rem;
-  font-size: 2.5rem;
-}
-
-.containerSectionCard {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.container-collection {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 2rem;
-  cursor: pointer;
-}
-
-.collection {
+.collections {
   width: 405px;
   height: 251px;
   border-radius: 0.5rem;
   background-size: cover;
   background-repeat: no-repeat;
   transition: transform 0.4s;
-}
-
-.collection:hover {
-  transform: scale(1.02);
-}
-
-.oferta {
-  background-color: #e7ff86;
-  width: 96px;
-  height: 32px;
-  font-size: 12px;
-  font-weight: 500;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 29px;
-  margin: 1rem auto 0 1.4rem;
+  flex-direction: column;
 }
 
-h3 {
+.collections:hover {
+  transform: scale(1.05);
+}
+
+.collections h3 {
+  margin: 1rem 8rem 0 1.5rem;
   font-weight: 700;
   font-size: 36px;
   line-height: 36px;
   letter-spacing: 1px;
 }
 
+.offer {
+  background-color: #e7ff86;
+  color: #474747;
+  width: 96px;
+  height: 32px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 29px;
+  margin: 1rem auto 0 1.4rem;
+  padding: 5px 15px;
+}
+
+
 @media (max-width: 1024px) {
-  .container-title {
-    margin: 2rem 0 0 2rem;
+  .titleContainer {
+    margin-left: 2rem;
     font-size: 22px;
   }
 
-  .container-collection {
-    gap: 1.5rem;
-    padding: 0 2rem;
-  }
-
-  .collection {
+  .collections {
     width: 350px;
     height: 220px;
   }
 
-  .collection h3 {
+  .collections h3 {
     font-size: 28px;
     margin: 1rem 2rem 0 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
-  .container-title {
-    margin: 1.5rem 0 0 1.5rem;
+  .titleContainer {
+    margin-left: 1.5rem;
     font-size: 20px;
     text-align: center;
   }
 
-  .container-collection {
+  .collectionContainer {
     flex-direction: column;
     gap: 1.5rem;
     padding: 0 1.5rem;
   }
 
-  .collection {
+  .collections {
     width: 100%;
     max-width: 400px;
     height: 200px;
   }
 
-  .collection h3 {
+  .collections h3 {
     font-size: 24px;
     margin: 1rem 1rem 0 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .container-title {
-    margin: 1rem 0 0 1rem;
+  .titleContainer {
+    margin-left: 1rem;
     font-size: 18px;
   }
 
-  .container-collection {
+  .collectionContainer {
     gap: 1rem;
     padding: 0 1rem;
   }
 
-  .collection {
+  .collections {
     height: 180px;
     min-width: 250px;
   }
 
-  .collection h3 {
+  .collections h3 {
     font-size: 20px;
     line-height: 24px;
     margin: 1rem 1rem 0 1rem;
   }
 
-  .oferta {
+  .offer {
     width: 80px;
     height: 28px;
     font-size: 11px;
-    margin: 1rem auto 0 1rem;
-  }
-
-  .collection:hover {
-    transform: scale(1.02);
+    margin-left: 1rem;
   }
 }
 
 @media (max-width: 320px) {
-  .container-title {
+  .titleContainer {
     font-size: 16px;
-    margin: 1rem 0 0 0.5rem;
+    margin-left: 0.5rem;
   }
 
-  .container-collection {
+  .collectionContainer {
     padding: 0 0.5rem;
   }
 
-  .collection {
+  .collections {
     min-width: 200px;
     height: 150px;
   }
 
-  .collection h3 {
+  .collections h3 {
     font-size: 18px;
     line-height: 20px;
     margin: 0.5rem 0.5rem 0 1rem;
   }
 
-  .oferta {
+  .offer {
     width: 70px;
     height: 24px;
     font-size: 10px;
-    margin: 0.5rem auto 0 1rem;
+    margin-left: 1rem;
   }
 }

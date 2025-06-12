@@ -12,7 +12,7 @@ body {
   scroll-behavior: smooth;
 }
 
-.color-bg {
+.backgroundColor {
   background: #F9F8FE;
   padding: 10px;
   font-weight: bold;

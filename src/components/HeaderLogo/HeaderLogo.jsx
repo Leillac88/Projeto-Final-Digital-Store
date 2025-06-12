@@ -4,8 +4,8 @@ import { Logo } from "../Logo/Logo";
 
 export function HeaderLogo() {
   return (
-    <header className="header-logo">
-      <div className="heading-logo">
+    <header className="headerLogo">
+      <div className="headingLogo">
         <Link to="/">
           <Logo />
         </Link>

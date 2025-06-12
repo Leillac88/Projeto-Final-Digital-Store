@@ -17,7 +17,7 @@ import AdidasPink from '../../../public/tenis13.png';
 import AdidasSamba from '../../../public/tenis14.png';
 import AdidasCor from '../../../public/tenis15.png';
 
-const initialProducts = [
+const AllProducts = [
   {
     nome: "Tênis Nike",
     descricao: "Nike Air Force 1",
@@ -173,111 +173,54 @@ const initialProducts = [
   },
 ];
 
+const brandList = ["Adidas", "Balenciaga", "K-Swiss", "Nike", "Puma"];
+const categoryList = ["Esporte e lazer", "Casual", "Utilitário", "Corrida"];
+const genderList = ["Masculino", "Feminino", "Unissex"];
+
 export function ProductPage() {
   const [sortOption, setSortOption] = useState("mais-relevantes");
-  const [filteredAndSortedProducts, setFilteredAndSortedProducts] = useState(initialProducts);
   const [showFilters, setShowFilters] = useState(false);
   const [selectedBrands, setSelectedBrands] = useState([]);
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [selectedGenders, setSelectedGenders] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState(AllProducts);
 
-  const parsePrice = (priceString) => {
-    if (!priceString) return 0;
-    return parseFloat(priceString.replace("R$", "").replace(/\./g, "").replace(",", "."));
-  };
+  const parsePrice = (price) =>
+    price ? parseFloat(price.replace("R$", "").replace(/\./g, "").replace(",", ".")) : 0;
 
   useEffect(() => {
-    let currentProducts = [...initialProducts];
+    let produtos = [...AllProducts];
 
-    if (selectedBrands.length > 0) {
-      currentProducts = currentProducts.filter(product =>
-        selectedBrands.includes(product.marca)
-      );
-    }
+    if (selectedBrands.length)
+      produtos = produtos.filter(p => selectedBrands.includes(p.marca));
 
-    if (selectedCategories.length > 0) {
-      currentProducts = currentProducts.filter(product =>
-        selectedCategories.includes(product.categoria)
-      );
-    }
+    if (selectedCategories.length)
+      produtos = produtos.filter(p => selectedCategories.includes(p.categoria));
 
-    if (selectedGenders.length > 0) {
-      currentProducts = currentProducts.filter(product =>
-        selectedGenders.includes(product.genero)
-      );
-    }
+    if (selectedGenders.length)
+      produtos = produtos.filter(p => selectedGenders.includes(p.genero));
 
-    switch (sortOption) {
-      case "menor-preco":
-        currentProducts.sort((a, b) => {
-          const priceA = parsePrice(a.desconto || a.preco);
-          const priceB = parsePrice(b.desconto || b.preco);
-          return priceA - priceB;
-        });
-        break;
-      case "maior-preco":
-        currentProducts.sort((a, b) => {
-          const priceA = parsePrice(a.desconto || a.preco);
-          const priceB = parsePrice(b.desconto || b.preco);
-          return priceB - priceA;
-        });
-        break;
-      case "mais-relevantes":
-      default:
-        break;
-    }
+    if (sortOption === "menor-preco")
+      produtos.sort((a, b) => parsePrice(a.desconto || a.preco) - parsePrice(b.desconto || b.preco));
+    else if (sortOption === "maior-preco")
+      produtos.sort((a, b) => parsePrice(b.desconto || b.preco) - parsePrice(a.desconto || a.preco));
 
-    setFilteredAndSortedProducts(currentProducts);
+    setFilteredProducts(produtos);
   }, [sortOption, selectedBrands, selectedCategories, selectedGenders]);
 
-  const handleSortChange = (event) => {
-    setSortOption(event.target.value);
-  };
-
-  const handleBrandChange = (event) => {
-    const brand = event.target.value;
-    setSelectedBrands(prevBrands =>
-      event.target.checked
-        ? [...prevBrands, brand]
-        : prevBrands.filter(b => b !== brand)
-    );
-  };
-
-  const handleCategoryChange = (event) => {
-    const category = event.target.value;
-    setSelectedCategories(prevCategories =>
-      event.target.checked
-        ? [...prevCategories, category]
-        : prevCategories.filter(c => c !== category)
-    );
-  };
-
-  const handleGenderChange = (event) => {
-    const gender = event.target.value;
-    setSelectedGenders(prevGenders =>
-      event.target.checked
-        ? [...prevGenders, gender]
-        : prevGenders.filter(g => g !== gender)
-    );
-  };
-
-  const toggleFilters = () => {
-    setShowFilters(!showFilters);
-  };
+  const toggleItem = (item, list, setList) =>
+    setList(list.includes(item) ? list.filter(i => i !== item) : [...list, item]);
 
   return (
-    <div className="bg-color">
-      <section className="prodCard">
-        <div className="first">
-          <h2>Resultados para "Tênis" - <span>{filteredAndSortedProducts.length} produtos</span></h2>
-          <div className="ordenar-por">
+    <div className="color-bg">
+      <section className="productCard">
+        <div className="productOrder">
+          <h2>
+            Resultados para "Tênis" - <span>{filteredProducts.length} produtos</span>
+          </h2>
+          <div className="orderBy">
             <span>Ordenar por:</span>
-            <select
-              id="ordenacao"
-              name="ordenacao"
-              value={sortOption}
-              onChange={handleSortChange}
-            >
+            <select value={sortOption} onChange={(e) => setSortOption(e.target.value)}>
               <option value="mais-relevantes">Mais relevantes</option>
               <option value="menor-preco">Menor preço</option>
               <option value="maior-preco">Maior preço</option>
@@ -285,72 +228,50 @@ export function ProductPage() {
           </div>
         </div>
 
-        <div className="content">
-          <button className="filter-toggle" onClick={toggleFilters}>
-            {showFilters ? 'Ocultar Filtros' : 'Mostrar Filtros'}
+        <div className="filterContent">
+          <button className="filter-toggle" onClick={() => setShowFilters(!showFilters)}>
+            {showFilters ? "Ocultar Filtros" : "Mostrar Filtros"}
           </button>
 
-          <aside className={`filter ${showFilters ? 'show' : ''}`}>
+          <aside className={`filter ${showFilters ? "show" : ""}`}>
             <p>Filtrar por</p>
             <hr />
-            <p>Marca</p>
-            <form>
-              {["Adidas", "Balenciaga", "K-Swiss", "Nike", "Puma"].map((brand, index) => (
-                <div key={index}>
-                  <input
-                    type="checkbox"
-                    value={brand}
-                    checked={selectedBrands.includes(brand)}
-                    onChange={handleBrandChange}
-                  />
-                  <label>{brand}</label>
-                </div>
-              ))}
-            </form>
-            <p>Categoria</p>
-            <form>
-              {["Esporte e lazer", "Casual", "Utilitário", "Corrida"].map((category, index) => (
-                <div key={index}>
-                  <input
-                    type="checkbox"
-                    value={category}
-                    checked={selectedCategories.includes(category)}
-                    onChange={handleCategoryChange}
-                  />
-                  <label>{category}</label>
-                </div>
-              ))}
-            </form>
-            <p>Gênero</p>
-            <form>
-              {["Masculino", "Feminino", "Unissex"].map((gender, index) => (
-                <div key={index}>
-                  <input
-                    type="checkbox"
-                    value={gender}
-                    checked={selectedGenders.includes(gender)}
-                    onChange={handleGenderChange}
-                  />
-                  <label>{gender}</label>
-                </div>
-              ))}
-            </form>
+            {[{ title: "Marca", list: brandList, state: selectedBrands, setState: setSelectedBrands },
+            { title: "Categoria", list: categoryList, state: selectedCategories, setState: setSelectedCategories },
+            { title: "Gênero", list: genderList, state: selectedGenders, setState: setSelectedGenders }
+            ].map(({ title, list, state, setState }) => (
+              <div key={title}>
+                <p>{title}</p>
+                <form>
+                  {list.map((item, index) => (
+                    <div key={index}>
+                      <input
+                        type="checkbox"
+                        value={item}
+                        checked={state.includes(item)}
+                        onChange={() => toggleItem(item, state, setState)}
+                      />
+                      <label>{item}</label>
+                    </div>
+                  ))}
+                </form>
+              </div>
+            ))}
           </aside>
 
-          <div className="second">
-            {filteredAndSortedProducts.map((produto, index) => (
-              <Link to="/viewProduct" key={index} className="prod-page-item">
-                <div className="prod-page-image">
+          <div className="pageContent">
+            {filteredProducts.map((produto, index) => (
+              <Link to="/viewProduct" key={index} className="pageItem">
+                <div className="pageImage">
                   <img src={produto.image} alt={produto.nome} />
-                  {produto.descPorc && (
-                    <p className="prod-page-descPorc">{produto.descPorc}</p>
-                  )}
+                  {produto.descPorc && <p className="productDescPercentage">{produto.descPorc}</p>}
                 </div>
-                <p className="prod-page-nome">{produto.nome}</p>
-                <p className="prod-page-descricao">{produto.descricao}</p>
-                <div className="prod-page-prices">
-                  {produto.preco && <p className="prod-page-price">{produto.preco}</p>}
-                  <p className="prod-page-priceDisc">{produto.desconto}</p>
+                <p className="productName">{produto.nome}</p>
+                <p className="productCardDescription">{produto.descricao}</p>
+
+                <div className="productPrices">
+                  {produto.preco && <p className="productRealPrice">{produto.preco}</p>}
+                  <p className="productPriceDiscount">{produto.desconto}</p>
                 </div>
               </Link>
             ))}

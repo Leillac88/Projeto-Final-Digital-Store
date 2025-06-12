@@ -7,57 +7,33 @@ import Tenis from "../../assets/sneakers.svg";
 
 import "./Category.css";
 
+const categories = [
+  { label: "Camisetas", image: Camiseta, alt: "Camiseta" },
+  { label: "Calças", image: Calca, alt: "Calça" },
+  { label: "Bonés", image: Bone, alt: "Boné" },
+  { label: "Headphones", image: Headphone, alt: "Headphone" },
+  { label: "Tênis", image: Tenis, alt: "Tênis" },
+];
+
 export function Category() {
   return (
-    <>
-      <div className="color-bg">
-        <section className="color">
-          <h2>Coleções em destaque</h2>
-          <div className="main">
-            <div className="f">
+    <div className="color-bg">
+      <section className="color">
+        <h2>Coleções em destaque</h2>
+        <div className="main">
+          {categories.map(({ label, image, alt }) => (
+            <div className="icons" key={label}>
               <picture>
                 <Link to="/products">
-                  <img src={Camiseta} alt="Camiseta" />
+                  <img src={image} alt={alt} />
                 </Link>
               </picture>
-              <p>Camisetas</p>
+              <p>{label}</p>
             </div>
-            <div className="f">
-              <picture>
-                <Link to="/products">
-                  <img src={Calca} alt="Calça" />
-                </Link>
-              </picture>
-              <p>Calças</p>
-            </div>
-            <div className="f">
-              <picture>
-                <Link to="/products">
-                  <img src={Bone} alt="Boné" />
-                </Link>
-              </picture>
-              <p>Bonés</p>
-            </div>
-            <div className="f">
-              <picture>
-                <Link to="/products">
-                  <img src={Headphone} alt="Headphone" />
-                </Link>
-              </picture>
-              <p>Headphones</p>
-            </div>
-            <div className="f">
-              <picture>
-                <Link to="/products">
-                  <img src={Tenis} alt="Tênis" />
-                </Link>
-              </picture>
-              <p>Tênis</p>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 }
 

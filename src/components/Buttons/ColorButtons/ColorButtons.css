@@ -1,12 +1,19 @@
-.containerCS {
+.colorContainers {
     display: flex;
-    gap: -15px;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
-.infoCircle {
+.circleColor {
     width: 25px;
     height: 25px;
-    border-Radius: 50%;
-    margin: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: gray;
     cursor: pointer;
+    transition: border 0.3s;
+}
+
+.circleColor.selected {
+    border: 2px solid #C92071;
 }

@@ -1,26 +1,21 @@
-import React, { useState } from "react";
-import './ColorButtons.css'
+import { useState } from "react";
+import "./ColorButtons.css";
 
-export default function Stars() {
+export default function ColorButtons() {
     const [selectedColor, setSelectedColor] = useState(null);
     const colorShoes = ["#6FEEFF", "#FF6969", "#5E5E5E", "#6D70B7"];
 
-    const handleColorSelection = (color) => {
-        setSelectedColor(color === selectedColor ? null : color);
-    };
-
     return (
-        <div className="containerCS">
+        <div className="colorContainers">
             {colorShoes.map((color, index) => (
-                <div className="infoCircle"
+                <div
                     key={index}
-                    style={{
-                        backgroundColor: color,
-                        border: selectedColor === color ? "2px solid #C92071" : "none"
-                    }}
-                    onClick={() => handleColorSelection(color)}
-                >
-                </div>
+                    className={`circleColor ${selectedColor === color ? "selected" : ""}`}
+                    style={{ backgroundColor: color }}
+                    onClick={() =>
+                        setSelectedColor(selectedColor === color ? null : color)
+                    }
+                />
             ))}
         </div>
     );

@@ -1,75 +1,64 @@
 import "./Footer.css";
-import vectorImage from "../../assets/logo-footer.svg";
+import LogoFooter from "../../assets/logo-footer.svg";
 import FacebookIcon from "../../assets/facebook.svg";
 import InstagramIcon from "../../assets/instagram.svg";
 import TwitterIcon from "../../assets/twitter.svg";
 
-const informacoes = [
-  {
-    titulo: "Informação",
-    itens: [
-      "Sobre Drip Store",
-      "Segurança",
-      "Wishlist",
-      "Blog",
-      "Trabalhe Conosco",
-      "Meus Pedidos",
-    ],
-  },
-  {
-    titulo: "Categorias",
-    itens: [
-      "Camisetas",
-      "Calças",
-      "Bonés",
-      "Headphones",
-      "Tênis"
-    ],
-  },
-  {
-    titulo: "Contato",
-    itens: [
-      "Av. Santos Dumont, 1510 - 1", "andar - Aldeota, Fortaleza -",
-      "CE, 60150-161.", "",
-
-      "(85) 3051-3411",
-    ],
-  },
-];
-
 export function Footer() {
   return (
     <footer>
-      <div className="container-1">
-        <div className="container-logo">
-          <img className="logo" src={vectorImage} alt="logo" />
+      <div className="infoContainer">
+        <div className="logoContainer">
+          <img className="logoFooter" src={LogoFooter} alt="logo" />
         </div>
-        <div className="text-container">
+        <div className="textContainer">
           Estilo, inovação e praticidade. A Digital Store conecta você aos produtos mais atuais com qualidade e atendimento de confiança.
         </div>
-        <div className="icons-sociais">
+        <div className="socialIcons">
           <a href="https://www.facebook.com/digitalcollegebr" target="_blank"><img src={FacebookIcon} alt="facebook" /></a>
           <a href="https://www.instagram.com/digitalcollegebr/" target="_blank"><img src={InstagramIcon} alt="instagram" /></a>
           <a href="https://x.com/eaicollegers" target="_blank"><img src={TwitterIcon} alt="twitter" /></a>
         </div>
       </div>
-      <div className="container-2">
-        {informacoes.map((info, index) => (
-          <div key={index} className="container-info">
-            <div className="conteudo">
-              <div className="title">
-                <span>{info.titulo}</span>
-              </div>
-              {info.itens.map((item, i) => (
-                <a key={i} href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}>{item}</a>
-              ))}
 
-            </div>
+      <div className="columnsContainer">
+        <div className="columnContent">
+          <div className="contentList">
+            <div className="contentTitle"><span>Informação</span></div>
+            <a href="#sobre-drip-store">Sobre Drip Store</a>
+            <a href="#seguranca">Segurança</a>
+            <a href="#wishlist">Wishlist</a>
+            <a href="#blog">Blog</a>
+            <a href="#trabalhe-conosco">Trabalhe Conosco</a>
+            <a href="#meus-pedidos">Meus Pedidos</a>
           </div>
-        ))}
+        </div>
+
+        <div className="columnContent">
+          <div className="contentList">
+            <div className="contentTitle"><span>Categorias</span></div>
+            <a href="#camisetas">Camisetas</a>
+            <a href="#calcas">Calças</a>
+            <a href="#bones">Bonés</a>
+            <a href="#headphones">Headphones</a>
+            <a href="#tenis">Tênis</a>
+          </div>
+        </div>
+
+        <div className="columnContent">
+          <div className="contentList">
+            <div className="contentTitle"><span>Contato</span></div>
+            <a href="#">Av. Santos Dumont, 1510 - 1</a>
+            <a href="#">andar - Aldeota, Fortaleza -</a>
+            <a href="#">CE, 60150-161.</a>
+            <a href="#">(85) 3051-3411</a>
+          </div>
+        </div>
       </div>
+
       <hr />
-      <div className="data-footer">
+
+      <div className="FooterCopy">
         <span>@ 2025 Digital College</span>
       </div>
     </footer>
