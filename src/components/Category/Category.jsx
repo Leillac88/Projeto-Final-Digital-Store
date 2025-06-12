@@ -4,7 +4,6 @@ import Calca from "../../assets/pants.svg";
 import Bone from "../../assets/bone-icon.svg";
 import Headphone from "../../assets/headphones.svg";
 import Tenis from "../../assets/sneakers.svg";
-
 import "./Category.css";
 
 const categories = [
@@ -17,7 +16,7 @@ const categories = [
 
 export function Category() {
   return (
-    <div className="color-bg">
+    <div className="backgroundColor">
       <section className="color">
         <h2>Coleções em destaque</h2>
         <div className="main">
