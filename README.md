@@ -56,8 +56,25 @@ src/
 ```
 
 ---
+## 🎨 Protótipo Inicial
 
+Antes de iniciar o desenvolvimento da Digital Store, foi criado um protótipo visual completo da interface, com foco em experiência do usuário (UX) e identidade visual moderna.
 
+- 🔗 **Repositório do Projeto:**  
+  [github.com/digitalcollegebr/projeto-digital-store](https://github.com/digitalcollegebr/projeto-digital-store)
+
+- 🖼️ **Protótipo no Figma:**  
+  [DRIP STORE - DIGITAL COLLEGE (Figma)](https://www.figma.com/design/cfb4F7ZXMFQmvmTn3PKI4z/DRIP-STORE---DIGITAL-COLLEGE?node-id=22-30&p=f&t=M88ajHQIOyGUo2UY-0)
+
+O protótipo apresenta todas as principais telas do projeto, incluindo:
+
+- Página inicial com destaques e categorias  
+- Página de produto com detalhes  
+- Carrinho de compras  
+- Checkout com formulário de finalização  
+- Página de confirmação de pedido
+
+---
 
 ## 👨‍💻 Desenvolvedores
 
