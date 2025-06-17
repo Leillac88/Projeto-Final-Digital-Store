@@ -76,6 +76,20 @@ O protótipo apresenta todas as principais telas do projeto, incluindo:
 
 ---
 
+## 🔐 Supabase (Banco de Dados & Autenticação)
+
+Este projeto utiliza [Supabase](https://supabase.com/) como backend para autenticação e banco de dados em tempo real.
+
+Você pode acessar o sistema com as seguintes credenciais de demonstração:
+
+**Login para acessar o Supabase**
+- 📧 Email: `digitalstore.gtech@gmail.com`
+- 🔑 Senha: `@Digitalstore2025`
+
+> ⚠️ Essas credenciais são apenas para fins de demonstração. Não utilize para dados pessoais ou sensíveis.
+
+---
+
 ## 👨‍💻 Desenvolvedores
 
 Feito com ❤️ por [Leilla Carvalho](https://github.com/Leillac88) e [Hudson Bezerra](https://github.com/NightHudson)
