@@ -98,5 +98,4 @@ Feito com ❤️ por [Leilla Carvalho](https://github.com/Leillac88) e [Hudson B
 
 ## 📄 Licença
 
-Este projeto está sob a licença MIT. <br>
-Sinta-se à vontade para usar, modificar e contribuir!
+Este projeto está sob a licença MIT.
